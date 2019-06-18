@@ -1,0 +1,876 @@
+Started GET "/" for 127.0.0.1 at 2019-06-09 04:12:09 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/puka89/.rvm/gems/ruby-2.5.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/puka89/.rvm/gems/ruby-2.5.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Recepies" for 127.0.0.1 at 2019-06-09 12:50:41 -0700
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateRecepies (20190609195024)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "recepies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "Title" varchar, "Description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190609195024_create_recepies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190609195024"]]
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-09 19:51:14.993765"], ["updated_at", "2019-06-09 19:51:14.993765"]]
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/Recepies" for 127.0.0.1 at 2019-06-09 12:51:19 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/Recepies"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 12:51:25 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 414ms (Views: 412.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recepies/new" for 127.0.0.1 at 2019-06-09 12:51:46 -0700
+Processing by RecepiesController#new as HTML
+  Rendering recepies/new.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (6.5ms)
+  Rendered recepies/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 12:51:58 -0700
+Processing by RecepiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9mEvTf+Si8sVdhGkyit5x2+PHvcADiC+igMUkN8NIgMBzLkT/lhdQZ404mbY9N5gySwvW9+UsWgZ6EAYVmCLOw==", "recepy"=>{"Title"=>"kyufteta", "Description"=>"pitay baba si"}, "commit"=>"Create Recepy"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:30
+  [1m[36mRecepy Create (0.7ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "kyufteta"], ["Description", "pitay baba si"], ["created_at", "2019-06-09 19:51:58.605855"], ["updated_at", "2019-06-09 19:51:58.605855"]]
+  ↳ app/controllers/recepies_controller.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:30
+Redirected to http://localhost:3000/recepies/1
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/recepies/1" for 127.0.0.1 at 2019-06-09 12:51:58 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recepies/1/edit" for 127.0.0.1 at 2019-06-09 12:52:35 -0700
+Processing by RecepiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  Rendering recepies/edit.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (2.0ms)
+  Rendered recepies/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 12:52:36 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 12:52:40 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recepies/1/edit" for 127.0.0.1 at 2019-06-09 12:52:45 -0700
+Processing by RecepiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  Rendering recepies/edit.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (1.4ms)
+  Rendered recepies/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recepies/1" for 127.0.0.1 at 2019-06-09 12:52:49 -0700
+Processing by RecepiesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nMm8aZ5UuqY0KxU31K/9aJdXZ3GLIjTHvoZLvE/2oxJRegmgheVgwaQ0b5X7s60q6pwrkDnz1PQ+My0tPvLqw==", "recepy"=>{"Title"=>"kyufteta", "Description"=>"aaaaaa"}, "commit"=>"Update Recepy", "id"=>"1"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:44
+  [1m[36mRecepy Update (0.2ms)[0m  [1m[33mUPDATE "recepies" SET "Description" = ?, "updated_at" = ? WHERE "recepies"."id" = ?[0m  [["Description", "aaaaaa"], ["updated_at", "2019-06-09 19:52:49.786498"], ["id", 1]]
+  ↳ app/controllers/recepies_controller.rb:44
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:44
+Redirected to http://localhost:3000/recepies/1
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/recepies/1" for 127.0.0.1 at 2019-06-09 12:52:49 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 12:53:17 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/recepies/1" for 127.0.0.1 at 2019-06-09 12:53:21 -0700
+Processing by RecepiesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m+2MMdC0T13vhRehHZ8oEXtFcs9D4BOxPVQ65r9bgFLDtUKpZLDmE14WqVBriMbewPi1dQsd9LwNw2lToJV82w==", "id"=>"1"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:57
+  [1m[36mRecepy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "recepies" WHERE "recepies"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/recepies_controller.rb:57
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:57
+Redirected to http://localhost:3000/recepies
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 12:53:21 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 13:04:53 -0700
+Processing by RecepiesController#create as */*
+  Parameters: {"title"=>"kyufteta po chirpanski", "description"=>"pak pitay baba si", "recepy"=>{}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 13:08:44 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 13:08:47 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 13:10:55 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RecepiesController#create as */*
+  Parameters: {"title"=>"kyufteta po chirpanski", "description"=>"pak pitay baba si", "recepy"=>{}}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recepy):
+  
+app/controllers/recepies_controller.rb:73:in `recepy_params'
+app/controllers/recepies_controller.rb:28:in `create'
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 13:13:15 -0700
+Error occurred while parsing request parameters.
+Contents:
+
+{Title":"kyufteta po chirpanski","Description":"pak pitay baba si"}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{Title":"kyufteta po chirpanski","Description":"pak pitay baba si"}'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recepies/new" for 127.0.0.1 at 2019-06-09 13:14:36 -0700
+Processing by RecepiesController#new as HTML
+  Rendering recepies/new.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (13.2ms)
+  Rendered recepies/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 162ms (Views: 157.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 13:14:42 -0700
+Processing by RecepiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yP64mF3ckoNakpW8c13WX9jD9lF1yRSiiNLRXH0iBZM/Uy7GXBZECdHQZn5hgnH4fmDH/apThXQbOYXU9E+sqw==", "recepy"=>{"Title"=>"dtujnnty", "Description"=>"ghnfuymdjkk"}, "commit"=>"Create Recepy"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[36mRecepy Create (1.0ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "dtujnnty"], ["Description", "ghnfuymdjkk"], ["created_at", "2019-06-09 20:14:42.797982"], ["updated_at", "2019-06-09 20:14:42.797982"]]
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+Redirected to http://localhost:3000/recepies/2
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/recepies/2" for 127.0.0.1 at 2019-06-09 13:14:42 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recepies" for 127.0.0.1 at 2019-06-09 13:15:42 -0700
+Processing by RecepiesController#create as */*
+  Parameters: {"Title"=>"kyufteta po chirpanski", "Description"=>"pak pitay baba si", "recepy"=>{"Title"=>"kyufteta po chirpanski", "Description"=>"pak pitay baba si"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[36mRecepy Create (0.3ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "kyufteta po chirpanski"], ["Description", "pak pitay baba si"], ["created_at", "2019-06-09 20:15:42.740242"], ["updated_at", "2019-06-09 20:15:42.740242"]]
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+Redirected to http://localhost:3000/recepies/3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/recepies/3" for 127.0.0.1 at 2019-06-09 13:16:25 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 23:26:17 -0700
+Processing by RecepiesController#index as HTML
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recepies/1" for 127.0.0.1 at 2019-06-09 23:28:50 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+Completed 404 Not Found in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recepy with 'id'=1):
+  
+app/controllers/recepies_controller.rb:68:in `set_recepy'
+Started GET "/recepies/2" for 127.0.0.1 at 2019-06-09 23:28:54 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies" for 127.0.0.1 at 2019-06-09 23:31:07 -0700
+Processing by RecepiesController#index as */*
+  Parameters: {"id"=>"2", "recepy"=>{"id"=>"2"}}
+  Rendering recepies/index.html.erb within layouts/application
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT "recepies".* FROM "recepies"[0m
+  ↳ app/views/recepies/index.html.erb:15
+  Rendered recepies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies/2" for 127.0.0.1 at 2019-06-09 23:32:35 -0700
+Processing by RecepiesController#show as */*
+  Parameters: {"id"=>"2", "recepy"=>{}}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recepies/2/edit" for 127.0.0.1 at 2019-06-09 23:38:15 -0700
+Processing by RecepiesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/edit.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (10.1ms)
+  Rendered recepies/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/recepies/2" for 127.0.0.1 at 2019-06-09 23:39:04 -0700
+Processing by RecepiesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlDWXRw3Bgvf4FqgDbQQX21jS/8YM7IhDhLGTPLkGEYmSD+/hqq5AJdjoHoAVRWAImvLizbzk3dp9c242t3rog==", "recepy"=>{"Title"=>"lazanq", "Description"=>"lazanq"}, "commit"=>"Update Recepy", "id"=>"2"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:45
+  [1m[36mRecepy Update (0.8ms)[0m  [1m[33mUPDATE "recepies" SET "Title" = ?, "Description" = ?, "updated_at" = ? WHERE "recepies"."id" = ?[0m  [["Title", "lazanq"], ["Description", "lazanq"], ["updated_at", "2019-06-10 06:39:04.558789"], ["id", 2]]
+  ↳ app/controllers/recepies_controller.rb:45
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:45
+Redirected to http://localhost:3000/recepies/2
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/recepies/2" for 127.0.0.1 at 2019-06-09 23:39:04 -0700
+Processing by RecepiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.html.erb within layouts/application
+  Rendered recepies/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/recepies/2/edit" for 127.0.0.1 at 2019-06-09 23:40:38 -0700
+  
+ActionController::RoutingError (No route matches [PUT] "/recepies/2/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/recepies/2/edit" for 127.0.0.1 at 2019-06-09 23:42:18 -0700
+Processing by RecepiesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/edit.html.erb within layouts/application
+  Rendered recepies/_form.html.erb (1.6ms)
+  Rendered recepies/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/recepies/2/edit" for 127.0.0.1 at 2019-06-09 23:42:47 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/recepies/2/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/recepies/2/edit" for 127.0.0.1 at 2019-06-09 23:46:29 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/recepies/2/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recepies/new.json" for 127.0.0.1 at 2019-06-10 00:13:54 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/puka89/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/recepies/new.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recepies/new" for 127.0.0.1 at 2019-06-10 00:21:09 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/recepies/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recepies/new.json" for 127.0.0.1 at 2019-06-10 00:21:22 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/recepies/new.json"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/recepies" for 127.0.0.1 at 2019-06-10 00:33:07 -0700
+Processing by RecepiesController#create as */*
+  Parameters: {"Title"=>"neshtoo", "Description"=>"neshtooooo", "recepy"=>{"Title"=>"neshtoo", "Description"=>"neshtooooo"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[36mRecepy Create (1.0ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "neshtoo"], ["Description", "neshtooooo"], ["created_at", "2019-06-10 07:33:07.694360"], ["updated_at", "2019-06-10 07:33:07.694360"]]
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+Redirected to http://localhost:3000/recepies/4
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started POST "/recepies.json" for 127.0.0.1 at 2019-06-10 00:33:40 -0700
+Processing by RecepiesController#create as JSON
+  Parameters: {"Title"=>"nishtoo", "Description"=>"nishtooooo", "recepy"=>{"Title"=>"nishtoo", "Description"=>"nishtooooo"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[36mRecepy Create (0.2ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "nishtoo"], ["Description", "nishtooooo"], ["created_at", "2019-06-10 07:33:40.491024"], ["updated_at", "2019-06-10 07:33:40.491024"]]
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  Rendering recepies/show.json.jbuilder
+  Rendered recepies/_recepy.json.jbuilder (0.6ms)
+  Rendered recepies/show.json.jbuilder (1.5ms)
+Completed 201 Created in 8ms (Views: 3.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/recepies.json" for 127.0.0.1 at 2019-06-10 00:37:43 -0700
+Processing by RecepiesController#create as JSON
+  Parameters: {"Title"=>"pitka", "Description"=>"pitay baba si", "recepy"=>{"Title"=>"pitka", "Description"=>"pitay baba si"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[36mRecepy Create (0.9ms)[0m  [1m[32mINSERT INTO "recepies" ("Title", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "pitka"], ["Description", "pitay baba si"], ["created_at", "2019-06-10 07:37:43.560296"], ["updated_at", "2019-06-10 07:37:43.560296"]]
+  ↳ app/controllers/recepies_controller.rb:31
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:31
+  Rendering recepies/show.json.jbuilder
+  Rendered recepies/_recepy.json.jbuilder (0.3ms)
+  Rendered recepies/show.json.jbuilder (1.1ms)
+Completed 201 Created in 8ms (Views: 2.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/recepies/2.json" for 127.0.0.1 at 2019-06-10 00:38:20 -0700
+Processing by RecepiesController#show as JSON
+  Parameters: {"id"=>"2", "recepy"=>{}}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  Rendering recepies/show.json.jbuilder
+  Rendered recepies/_recepy.json.jbuilder (0.5ms)
+  Rendered recepies/show.json.jbuilder (1.1ms)
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/recepies/2.json" for 127.0.0.1 at 2019-06-10 00:40:32 -0700
+Processing by RecepiesController#update as JSON
+  Parameters: {"Title"=>"lazanq", "Description"=>"updated lazanq", "id"=>"2", "recepy"=>{"Title"=>"lazanq", "Description"=>"updated lazanq"}}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:68
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:45
+  [1m[36mRecepy Update (0.3ms)[0m  [1m[33mUPDATE "recepies" SET "Description" = ?, "updated_at" = ? WHERE "recepies"."id" = ?[0m  [["Description", "updated lazanq"], ["updated_at", "2019-06-10 07:40:32.674276"], ["id", 2]]
+  ↳ app/controllers/recepies_controller.rb:45
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:45
+  Rendering recepies/show.json.jbuilder
+  Rendered recepies/_recepy.json.jbuilder (0.3ms)
+  Rendered recepies/show.json.jbuilder (1.0ms)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/recepies/2.json" for 127.0.0.1 at 2019-06-10 00:47:09 -0700
+Processing by RecepiesController#destroy as JSON
+  Parameters: {"id"=>"2", "recepy"=>{}}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:55
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepies_controller.rb:46
+  [1m[36mRecepy Destroy (0.6ms)[0m  [1m[31mDELETE FROM "recepies" WHERE "recepies"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/recepies_controller.rb:46
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepies_controller.rb:46
+Completed 204 No Content in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/recepies/2.json" for 127.0.0.1 at 2019-06-10 00:47:34 -0700
+Processing by RecepiesController#show as JSON
+  Parameters: {"id"=>"2", "recepy"=>{}}
+  [1m[36mRecepy Load (0.1ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:55
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recepy with 'id'=2):
+  
+app/controllers/recepies_controller.rb:55:in `set_recepy'
+Started GET "/recepies/2.json" for 127.0.0.1 at 2019-06-10 00:47:54 -0700
+Processing by RecepiesController#show as JSON
+  Parameters: {"id"=>"2", "recepy"=>{}}
+  [1m[36mRecepy Load (0.2ms)[0m  [1m[34mSELECT  "recepies".* FROM "recepies" WHERE "recepies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepies_controller.rb:55
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recepy with 'id'=2):
+  
+app/controllers/recepies_controller.rb:55:in `set_recepy'

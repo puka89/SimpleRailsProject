@@ -1,0 +1,27 @@
+<%= form_with(model: recepy, local: true) do |form| %>
+  <% if recepy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recepy.errors.count, "error") %> prohibited this recepy from being saved:</h2>
+
+      <ul>
+      <% recepy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Description %>
+    <%= form.text_area :Description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
